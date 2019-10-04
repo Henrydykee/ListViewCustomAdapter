@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(Data("nine","nineaudio"))
         arrayList.add(Data("ten","tenaudio"))
 
-        var adapter : 
+        var adapter : NumberAdapter(this,arraylist)
+        list_view.adapter = adapter
     }
 }
 class NumberAdapter : BaseAdapter{
